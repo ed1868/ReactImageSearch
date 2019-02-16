@@ -1,11 +1,20 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default class searchBar extends Component {
   render() {
     return (
       <div>
-        <h1>Hello</h1>
+        <div className="field">
+          <div className="control">
+            <input
+              className="input is-info"
+              type="text"
+              placeholder="Info input"
+            />
+            
+          </div>
+        </div>
       </div>
-    )
+    );
   }
 }
