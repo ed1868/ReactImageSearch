@@ -1,25 +1,49 @@
 import React, { Component } from "react";
 
 export default class searchBar extends Component {
-  onInputChange(event) {
-    console.log(event.target.value);
+  state = {
+    term: ''  
+  }
+  onFormSubmit = (e) => {
+    e.preventDefault();
+
   }
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.onFormSubmit} className="ui segment">
           <div className="field">
             <div className="control">
               <input
                 className="input is-info"
                 type="text"
-                onChange={(event) => {console.log(event.target.value)}}
+                value = {this.state.term}
+                onChange={(e) => {this.setState({term : e.target.value})}}
                 placeholder="search away.."
               />
             </div>
           </div>
         </form>
       </div>
+      
     );
   }
 }
+
+
+
+//cuanduf -- whats new?       qua do nuff
+
+// conagh -----> cabron
+
+// ca va ----> whats up 
+
+// como ca va -----> how are you doing ?
+
+
+// e tua ---> and you ? 
+
+/// merci bocu ---> that you very mucho
+
+
+// j'ai faim - im hungryx

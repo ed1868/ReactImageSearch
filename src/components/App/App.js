@@ -6,8 +6,9 @@ class App extends Component {
   render() {
     return (
       <div>
-      <SearchBar />
-         
+        <div className="container">
+        <SearchBar />  
+        </div>  
       </div>
     );
   }
