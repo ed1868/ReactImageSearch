@@ -1,12 +1,17 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
 export default class imageList extends Component {
 
-  render() {
+  render(props) {
+    let images = this.props.images;
+
+    let imageList= images.map(image => {
+      let url = image.urls.full;
+      return <img src={url} />
+    });
     return (
       <div>
-        
+        <div>{imageList}</div>
       </div>
     )
   }
