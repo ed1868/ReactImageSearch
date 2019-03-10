@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { lstat } from "fs";
 
 export default class searchBar extends Component {
   state = {
