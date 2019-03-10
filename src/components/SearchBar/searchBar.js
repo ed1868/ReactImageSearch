@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { lstat } from "fs";
 
 export default class searchBar extends Component {
   state = {
@@ -6,7 +7,10 @@ export default class searchBar extends Component {
   }
   onFormSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state.term); 
+    console.log(this.state.term);
+
+    this.props.onSubmit(this.state.term);
+
   }
   render() {
     return (
