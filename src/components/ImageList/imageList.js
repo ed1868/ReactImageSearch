@@ -1,18 +1,17 @@
-import React, { Component } from 'react'
-import './imageList.css'
-
+import React, { Component } from "react";
+import "./imageList.css";
+import ImageCard from "../ImageCard/imageCard";
 export default class imageList extends Component {
-
   render(props) {
     let images = this.props.images;
 
-    let imageList= images.map(({description ,id, urls} )=> {
-      return <img className="column is-half" alt={description} key={id} src={urls.regular} />
+    let imageList = images.map(image => {
+      return <ImageCard key={image.id} image={image} />;
     });
     return (
       <div>
-        <div classNam="column" >{imageList}</div>
+        <div className="column">{imageList}</div>
       </div>
-    )
+    );
   }
 }
